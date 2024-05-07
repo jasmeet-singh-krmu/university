@@ -33,7 +33,7 @@ function LoginPage() {
       
       
       // Redirects to Dashboard Page
-      //navigate('/')
+      navigate('/')
 
     })
     .catch(error => {
@@ -78,7 +78,7 @@ function LoginPage() {
 
       </form>
 
-      <div>
+      {/* <div>
         {
           loginContext.loggedIn
           ? 'Logged In as ' + loginContext.userdata.username
@@ -86,7 +86,7 @@ function LoginPage() {
         }
       </div>
       <br />
-      <div>Token: { loginContext.token }</div>
+      <div>Token: { loginContext.token }</div> */}
 
     </>
   )

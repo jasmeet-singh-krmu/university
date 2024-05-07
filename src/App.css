@@ -5,3 +5,11 @@
 .form_field label {
     padding-right: 10px;
 }
+
+.header {
+    padding: 10px;
+    background-color: #ddd;
+}
+.header a {
+    padding-right: 20px;
+}

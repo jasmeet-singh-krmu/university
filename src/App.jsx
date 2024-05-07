@@ -10,6 +10,9 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import DashboardPage from './pages/DashboardPage'
 import LoginPage from './pages/LoginPage'
 
+// Layouts
+import Layout from './layouts/Layout'
+
 // TODO NEXT
 // Use Layouts
 
@@ -39,8 +42,10 @@ function App() {
       <LoginContext.Provider value={{ loggedIn,setLoggedIn, token,setToken, userdata,setUserdata }}>
         <BrowserRouter>
           <Routes>
-            <Route path="/" element={ <DashboardPage /> } />
-            <Route path="/login" element={ <LoginPage /> } />
+            <Route path="/" element={ <Layout /> }>
+              <Route index element={ <DashboardPage /> } />
+              <Route path="/login" element={ <LoginPage /> } />
+            </Route>
           </Routes>
         </BrowserRouter>
       </LoginContext.Provider>
