@@ -9,6 +9,8 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom'
 // Pages
 import DashboardPage from './pages/DashboardPage'
 import LoginPage from './pages/LoginPage'
+import StudentsPage from './pages/StudentsPage'
+import DepartmentsPage from './pages/DepartmentsPage'
 
 // Layouts
 import Layout from './layouts/Layout'
@@ -45,6 +47,8 @@ function App() {
             <Route path="/" element={ <Layout /> }>
               <Route index element={ <DashboardPage /> } />
               <Route path="/login" element={ <LoginPage /> } />
+              <Route path="/students" element={ <StudentsPage /> } />
+              <Route path="/departments" element={ <DepartmentsPage /> } />
             </Route>
           </Routes>
         </BrowserRouter>

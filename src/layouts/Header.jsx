@@ -24,8 +24,14 @@ function Header() {
 
     return(
         <div className='header'>
-            <Link to="/">Dashboard</Link>
 
+            <Link to="/">Dashboard</Link>
+            <Link to="/departments">Departments</Link>
+
+            { loginContext.loggedIn && (
+            <Link to="/students">Students</Link>
+            ) }
+            
             {(
                 loginContext.loggedIn
                 ? <a href="" onClick={logout}>Logout</a>
