@@ -34,7 +34,7 @@ function App() {
     )
     setToken( localStorage.getItem('token') )
     setUserdata( JSON.parse(localStorage.getItem('userdata')) )
-    setLocalStorageRead(true)
+    setLocalStorageRead(true) // Indicating that the context has been read from the LocalStorage (weather the vaues were there in the LocalStorage or not)
     return ()=>{}
   },[])
 
