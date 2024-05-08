@@ -21,6 +21,7 @@ import Layout from './layouts/Layout'
 function App() {
 
   // Context States
+  const [localStorageRead, setLocalStorageRead] = useState(false)
   const [loggedIn, setLoggedIn] = useState(false)
   const [token, setToken] = useState('')
   const [userdata, setUserdata] = useState(null)
@@ -33,6 +34,8 @@ function App() {
     )
     setToken( localStorage.getItem('token') )
     setUserdata( JSON.parse(localStorage.getItem('userdata')) )
+    setLocalStorageRead(true)
+    return ()=>{}
   },[])
 
   // Routing (React Router)
@@ -41,7 +44,7 @@ function App() {
 
   return (
     <>
-      <LoginContext.Provider value={{ loggedIn,setLoggedIn, token,setToken, userdata,setUserdata }}>
+      <LoginContext.Provider value={{ localStorageRead,setLocalStorageRead, loggedIn,setLoggedIn, token,setToken, userdata,setUserdata }}>
         <BrowserRouter>
           <Routes>
             <Route path="/" element={ <Layout /> }>

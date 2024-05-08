@@ -2,6 +2,9 @@ import { createContext } from "react";
 
 let LoginContext = createContext({
     
+    localStorageRead: false,
+    setLocalStorageRead: ()=> {},
+    
     loggedIn: false,
     setLoggedIn: ()=> {},
 
