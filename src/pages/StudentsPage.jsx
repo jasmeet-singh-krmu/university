@@ -49,7 +49,7 @@ function StudentsPage() {
       })
        
       return ()=>{}
-    },[loginContext.localStorageRead])
+    },[loginContext.localStorageRead]) // Because localStorageRead always changes even if nothing was found in the localStorage
 
     return(
       <>
